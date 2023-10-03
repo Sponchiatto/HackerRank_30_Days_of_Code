@@ -1,44 +1,25 @@
-// Not Done yet
-
 function main() {
-  const n = parseInt(readLine(), 10);
-  var decNum = dec2bin(n);
-  console.log(charCount(decNum, 1));
-}
-dec2bin = (dec) => {
-  return (dec >>> 0).toString(2);
-};
-function charCount(str, letter) {
-  var letter_count = 0;
-  for (var i = 0; i < str.length; i++) {
-    if (str.charAt(i) == letter) {
-      letter_count += 1;
+  //base 10 number
+  // const n = parseInt(readLine().trim(), 10); - Node.js implementation
+  const n = parseInt(prompt("Digite um número em decimal:"), 10); //JS implementation
+
+  // Convert the integer to binary representation
+  const binaryStr = n.toString(2);
+  console.log(binaryStr);
+
+  // Split the binary string by '0' to get an array of consecutive '1's
+  const consecutiveOnes = binaryStr.split("0");
+  console.log(consecutiveOnes);
+
+  // Find the maximum length of consecutive '1's
+  let maxConsecutiveOnes = 0;
+  for (let i = 0; i < consecutiveOnes.length; i++) {
+    if (consecutiveOnes[i].length > maxConsecutiveOnes) {
+      maxConsecutiveOnes = consecutiveOnes[i].length;
     }
   }
-  return letter_count;
+
+  console.log(maxConsecutiveOnes);
 }
 
-// main();
-
-function main(n) {
-  var decNum = dec2bin(n);
-  console.log(charCount(decNum, "1"));
-}
-
-function dec2bin(dec) {
-  return (dec >>> 0).toString(2);
-}
-
-function charCount(str, letter) {
-  var letter_count = 0;
-  for (var i = 0; i < str.length; i++) {
-    if (str.charAt(i) === letter) {
-      letter_count += 1;
-    }
-  }
-  return letter_count;
-}
-
-// Chame a função principal com o valor diretamente como um argumento
-const decimalNumber = 5; // Você pode substituir isso pelo valor desejado
-main(decimalNumber);
+main();
