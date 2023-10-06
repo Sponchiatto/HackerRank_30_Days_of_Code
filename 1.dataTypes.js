@@ -13,9 +13,11 @@ let i;
 let d;
 let s;
 
-// Read input from stdin
-i = parseInt(readLine()); // Parse integer
-d = parseFloat(readLine()); // Parse double
+
+// Parse integer, ou Analisar Inteiro, esse comando pega uma string e retorna um número na base especificada.
+i = parseInt(readLine()); 
+// Parse Double, ou analisar flutuante, pega uma string e retorna um número decimal
+d = parseFloat(readLine()); 
 s = readLine(); // Read string
 
 // Perform operations
@@ -25,5 +27,5 @@ const concatenatedString = "HackerRank " + s;
 
 // Print results
 console.log(sumInt);
-console.log(sumDouble.toFixed(1)); // Print double with one decimal place
+console.log(sumDouble.toFixed(1)); // Print double with one decimal place. toFixed() número de casas para fixar
 console.log(concatenatedString);

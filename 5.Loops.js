@@ -5,6 +5,7 @@
 function main() {
   var N = parseInt(readLine());
 
+  // Loop For Clássico, (inicialização; condição; expressão final)
   for (let x = 1; x < 11; x++) {
     const result = N * x;
     console.log(N + " x " + x + " = " + result);

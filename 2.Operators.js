@@ -5,14 +5,12 @@
 // Round the result to the nearest integer.
 
 function solve(meal_cost, tip_percent, tax_percent) {
-  // Write your code here
+
+  // Operadores matemáticos para fazer contas
   const tip = meal_cost * (tip_percent / 100);
-
-  // Calculate tax amount
   const tax = meal_cost * (tax_percent / 100);
-
-  // Calculate total cost
   const total_cost = meal_cost + tip + tax;
 
+  // Math.round: arredonda para o número mais próximo.
   console.log(Math.round(total_cost));
 }
