@@ -21,7 +21,7 @@ function Person(initialAge) {
     this.age = initialAge;
   }
 
-  // É uma palavra chave, tendo tanto contexto global (fora de qualquer função)
+  // this É uma palavra chave, tendo tanto contexto global (fora de qualquer função)
   // console.log(this.document === document); // true
 
   // // Em navegadores web, o objeto window é também o objeto global:
@@ -46,6 +46,7 @@ function Person(initialAge) {
 
   // f2() === undefined; // true
   // Ou seja, se this não for definido durante o contexto de execução, ele permanecerá indefinido.
+  
   this.amIOld = function () {
     // Do some computations in here and print out the correct statement to the console
     if (this.age < 13) {
