@@ -3,7 +3,7 @@
 // line of space-separated numbers.
 
 function reverseOrder(input) {
-  //Enter your code here
+  // Reverses the order of elements in the 'input' array and assigns the result to 'reversed'
   const reversed = input.reverse();
 
   // The join() method joins all the elements of an array (or an array-like object)

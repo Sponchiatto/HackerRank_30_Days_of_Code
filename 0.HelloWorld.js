@@ -1,6 +1,6 @@
-// Primeiro desafio, Para completar este desafio, você deve salvar 
-// uma linha de entrada de stdin em uma variável, imprimir Hello, World. em uma única linha e, 
-// finalmente, imprima o valor da sua variável em uma segunda linha.
+// First challenge, To complete this challenge, you must save
+// a line of input from stdin into a variable, prints Hello, World. in a single line and,
+// finally, print the value of your variable on a second line.
 
 function processData(inputString) {
   // This line of code prints the first line of output
@@ -8,3 +8,5 @@ function processData(inputString) {
   // Write the second line of output that prints the contents of 'inputString' here.
   console.log(inputString);
 }
+
+processData("Testing the script!");

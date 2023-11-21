@@ -1,5 +1,5 @@
 function main() {
-  //base 10 number
+  //base 10 number to base 2 number
   // const n = parseInt(readLine().trim(), 10); - Node.js implementation
   const n = parseInt(prompt("Digite um número em decimal:"), 10); //JS implementation
 
@@ -13,6 +13,7 @@ function main() {
 
   // Find the maximum length of consecutive '1's
   let maxConsecutiveOnes = 0;
+  
   for (let i = 0; i < consecutiveOnes.length; i++) {
     if (consecutiveOnes[i].length > maxConsecutiveOnes) {
       maxConsecutiveOnes = consecutiveOnes[i].length;

@@ -1,20 +1,21 @@
 function processData(input) {
-  // Divide a entrada em linhas utilizando quebras de linha \n
+  // Split the input into lines using line breaks \n
   input = input.split("\n");
-  // Criação de uma matriz para armazenar os número de telefone
+
+  // Creating an array to store phone numbers
   var phoneBook = [];
 
-  //Loop que se inicia da segunda até a quantidade de consultas informada na primeira linha do input
+  //Loop that starts from the second to the number of queries informed in the first line of the input
   for (i = 1; i <= parseInt(input[0]); i++) {
-    // Divide cada linha em um array usando o espaço como separador
+    // Split each line into an array using space as a separator
     var contactArray = input[i].split(" ");
-
-    //Armaza o número de telefone associando o nome como chave e o número como valor
+    
+    //Store the phone number associating the name as key and number as value
     phoneBook[contactArray[0]] = contactArray[1];
   }
 
-  // Verifica se o nome fornecido na consulta existe no phoneBook e imprime o número de telefone correspondente
-  // ou "Not found" caso contrário.
+  // Checks if the name provided in the query exists in the phoneBook and prints the corresponding phone number
+  // or "Not found" otherwise.
   for (i = parseInt(input[0]) + 1; i < input.length; i++) {
     if (phoneBook[input[i]]) {
       // Se existir, ele imprime o nome e o número de telefone correspondente
@@ -26,8 +27,8 @@ function processData(input) {
   }
 }
 
-// O uso de ` ` (template literals) permite que você crie strings de várias linhas, tornando mais fácil 
-//  incluir quebras de linhas e manter uma formatação legível.
+// Using ` ` (template literals) allows you to create multi-line strings, making it easier
+// include line breaks and maintain readable formatting.
 const input = `3
 sam 99912222
 tom 11122222

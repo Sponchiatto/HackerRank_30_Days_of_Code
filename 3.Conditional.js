@@ -6,25 +6,27 @@
 // If  is even and greater than , print Not Weird
 // Complete the stub code provided in your editor to print whether or not  is weird.
 
-function main() {
-  const N = parseInt(readLine().trim(), 10);
+function main(N) {
 
-  // Estrutura condicional de Ifs e elses
-  // Se o resto da divisão de N por 2 for diferente de 0, print Weird.
+  // Conditional structure of Ifs and elses
+  // If the remainder of dividing N by 2 is different from 0, print Weird.
   if (N % 2 !== 0) {
     console.log("Weird");
-  // Porém, se N estiver entre 2 e 5, print Not Weird
+
+    // However, if N is between 2 and 5, print Not Weird
   } else {
     if (N >= 2 && N <= 5) {
       console.log("Not Weird");
-    
-    //  Porém se N estiver entre 6 e 20, imprima estranho
+
+      // However, if N is between 6 and 20, print strange
     } else if (N >= 6 && N <= 20) {
       console.log("Weird");
-    
-      // Se nenhbuma condição for atendida, imprima Not Weird
+
+      // If no conditions are met, print Not Weird
     } else {
       console.log("Not Weird");
     }
   }
 }
+
+main(10);

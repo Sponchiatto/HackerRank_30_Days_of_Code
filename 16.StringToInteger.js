@@ -1,28 +1,28 @@
-// Este código em JavaScript é uma função chamada `main` que lê uma string `S` e tenta
-// convertê-la em um número usando a função `Number(S)`. Aqui está uma explicação passo a passo do código:
+// This JavaScript code is a function called `main` that reads a string `S` and tries
+// convert it to a number using the `Number(S)` function. Here is a step-by-step explanation of the code:
 
-// 1. `const S = readLine();`: Esta linha lê uma linha de entrada usando a função `readLine()`
-// (presumindo que `readLine()` esteja definido em algum lugar do ambiente de execução).
-// A string lida é armazenada na constante `S`.
+// 1. `const S = readLine();`: This line reads a line of input using the `readLine()` function
+// (assuming `readLine()` is defined somewhere in the execution environment).
+// The read string is stored in the constant `S`.
 
 // 2. `isNaN(Number(S)) ? error : console.log(S);`:
-// Esta linha tenta converter a string `S` em um número usando a função `Number(S)`. Aqui está como isso funciona:
+// This line tries to convert the string `S` into a number using the `Number(S)` function. Here's how it works:
 
-//    - `Number(S)` tenta converter a string `S`
-// em um número. Se a conversão for bem-sucedida, o resultado é um número; caso contrário,
-// o resultado será NaN (Not-a-Number).
+// - `Number(S)` tries to convert the string `S`
+// into a number. If the conversion is successful, the result is a number; otherwise,
+// the result will be NaN (Not-a-Number).
 
-//    - `isNaN()` é uma função que verifica se o valor
-// passado como argumento é NaN. Portanto, `isNaN(Number(S))` verifica se a conversão de `S`
-// para um número resultou em NaN.
+// - `isNaN()` is a function that checks whether the value
+// passed as argument is NaN. Therefore, `isNaN(Number(S))` checks whether the conversion of `S`
+// for a number resulted in NaN.
 
-//    - O operador ternário `? :` é usado para fazer uma
-// verificação condicional. Se a expressão `isNaN(Number(S))` for verdadeira
-// (ou seja, a conversão resultou em NaN), ele executa `error`, caso contrário, ele executa `console.log(S)`.
+// - The ternary operator `? :` is used to make a
+// conditional check. If the expression `isNaN(Number(S))` is true
+// (i.e. the conversion resulted in NaN), it executes `error`, otherwise it executes `console.log(S)`.
 
-// 3. `catch (err) { console.log("Bad String"); }`: Este bloco `catch` captura qualquer exceção que possa ser lançada dentro do bloco `try`. Se a conversão de `S` para número resultar em uma exceção (por exemplo, se `S` não puder ser convertido em número), então ele imprime "Bad String".
+// 3. `catch (err) { console.log("Bad String"); }`: This `catch` block catches any exception that may be thrown within the `try` block. If converting `S` to number results in an exception (for example, if `S` cannot be converted to number), then it prints "Bad String".
 
-// Em resumo, o código tenta converter a string `S` em um número e, se for bem-sucedido, imprime o número. Se a conversão não for bem-sucedida e uma exceção for lançada, ele imprime "Bad String". Isso permite que o programa lide com entradas inválidas de forma controlada, em vez de lançar um erro não tratado.
+// In short, the code tries to convert the string `S` to a number and, if successful, prints the number. If the conversion is not successful and an exception is thrown, it prints "Bad String". This allows the program to handle invalid input in a controlled way, rather than throwing an unhandled error.
 function main() {
   const S = readLine();
 
@@ -44,27 +44,3 @@ main(""); // Deve imprimir "Bad String"
 
 // Chame a função com uma string que começa com números, mas contém caracteres não numéricos.
 main("456abc"); // Deve imprimir "Bad String"
-
-// function ReadString() {
-//   const s = readLine(); // Read string
-
-//   const integerValue = Number(s);
-
-//   if (!isNaN(integerValue)) {
-//     console.log(integerValue);
-//   } else {
-//     console.log("Bad String");
-//   }
-// }
-
-// Chame a função com uma string que pode ser convertida para inteiro.
-ReadString("123"); // Deve imprimir 123
-
-// Chame a função com uma string que não pode ser convertida para inteiro.
-ReadString("abc"); // Deve imprimir "Bad String"
-
-// Chame a função com uma string vazia.
-ReadString(""); // Deve imprimir "Bad String"
-
-// Chame a função com uma string que começa com números, mas contém caracteres não numéricos.
-ReadString("456abc"); // Deve imprimir "Bad String"

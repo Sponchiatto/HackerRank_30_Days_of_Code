@@ -34,27 +34,6 @@ function insert(head, data) {
   return head; // Return the reference to the head of the linked list.
 }
 
-// linkedlist class
-// class LinkedList {
-//     constructor()
-//     {
-//         // head stores the first node of a List, and size indicates the number of nodes in a list
-//         this.head = null;
-//         this.size = 0;
-//     }
-
-// functions to be implemented
-// add(element)
-// insertAt(element, location)
-// removeFrom(location)
-// removeElement(element)
-
-// Helper Methods
-// isEmpty
-// size_Of_List
-// PrintList
-// }
-
 let head = null; // Initialize an empty linked list
 
 // Insert nodes into the linked list
